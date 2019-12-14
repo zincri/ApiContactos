@@ -1,0 +1,13 @@
+[8:11 p. m., 6/12/2019] Cristian Guanajuato: Hagamos interesante el modelo
+
+[8:11 p. m., 6/12/2019] Cristian Guanajuato: Un contacto puede tener 1 o más teléfonos, el teléfono puede ser: Celular, Casa, Trabajo
+
+[8:12 p. m., 6/12/2019] Cristian Guanajuato: 1 contacto tendrá dirección: calle, num ext, num int, colonia, cp, municipio, latitudes, longitude
+
+[8:13 p. m., 6/12/2019] Cristian Guanajuato: 1 contacto puede tener 1 o más referencias
+
+[8:13 p. m., 6/12/2019] Cristian Guanajuato: Cada referencia será a la vez 1 contacto
+
+[8:13 p. m., 6/12/2019] Cristian Guanajuato: Y guardar su foto de cada contacto
+
+[8:13 p. m., 6/12/2019] Cristian Guanajuato: Hagan el diseño de la db con esa especificación
