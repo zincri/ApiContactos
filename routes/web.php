@@ -18,3 +18,4 @@ Route::get('/', function () {
 //Auth::routes();
 //Auth::routes(['register' => false]); // Falta remover el controlador.
 Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/get-token', 'Auth\ApiTokenController@update')->name('token');

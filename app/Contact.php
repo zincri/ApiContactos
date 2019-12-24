@@ -21,13 +21,11 @@ class Contact extends Model
     }
 
     public function address(){
-
         return $this -> hasOne('App\Address','contact_id','id');
     }
 
     public function phone(){
-
-        return $this->hasOne('App\Phone','contact_id','id');
+        return $this->hasMany('App\Phone','contact_id','id');
     }
 
     public function references(){ 

@@ -107,7 +107,7 @@ class ContactController extends Controller
         if($contact = Contact::find($id)){
             $contact->update($request->all());
             //No lo puedes editar por que no sabes que id
-            //va a tener cadar telefono si tiene mucho,
+            //va a tener cadar telefono si tiene muchos,
             //mientras haya 1 no hay problema, pero si con muchos.
             //$phone = Phone::find($request->phone[0]);
             //$phone->update($request->phone->all());
