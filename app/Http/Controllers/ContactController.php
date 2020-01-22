@@ -17,7 +17,6 @@ class ContactController extends Controller
     public function index()
     {
         $contact = Contact::all();
-        //dd($contact);
         return response()->json($contact,200,[$contact->load('user'),$contact->load('references'),$contact->load('phone')]);
     }
 
@@ -57,14 +56,8 @@ class ContactController extends Controller
         $phone->type_id=$tipo_telefono->id;
         $phone->telefono=$request->numero_telefono;
         $phone->contact_id=$contact->id;
-        //$phone->phones_type($tipo_telefono);
         $phone->save();
-
-
-
-
         return response()->json($contact,201);
-
     }
 
     /**
