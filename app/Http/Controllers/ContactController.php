@@ -7,6 +7,7 @@ use App\Contact;
 use App\User;
 use App\PhonesType;
 use App\Phone;
+use JWTAuth;
 class ContactController extends Controller
 {
     /**
@@ -39,8 +40,8 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $user = User::findOrFail($request->user_id);
+        $user_id = JWTAuth::parseToken()->authenticate()->id;
+        //$user = User::findOrFail($request->user_id);
         $tipo_telefono = PhonesType::findOrFail($request->tipo_telefono);
 
         $contact = new Contact;
@@ -49,7 +50,7 @@ class ContactController extends Controller
         $contact->apellido_materno =$request->apellido_materno;
         $contact->edad =$request->edad;
         $contact->numero_telefono =$request->numero_telefono;
-        $contact->user_id = $request->user_id;
+        $contact->user_id = $user_id;
         $contact->save();
 
         $phone = new Phone;
